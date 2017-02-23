@@ -1,7 +1,7 @@
 module Roadmap
-  
+
   def get_roadmap
-    response = self.class.get(base_api_endpoint("roadmap/#{38}"), headers: { "authorization" => @auth_token })
+    response = self.class.get(base_api_endpoint("roadmaps/#{38}"), headers: { "authorization" => @auth_token })
     @roadmap = JSON.parse(response.body)
   end
 
